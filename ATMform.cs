@@ -1,10 +1,15 @@
 namespace ATM
 {
-    public partial class Form1 : Form
+    public partial class ATM : Form
     {
-        public Form1()
+        public ATM()
         {
             InitializeComponent();
+        }
+
+        private void ATM_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
