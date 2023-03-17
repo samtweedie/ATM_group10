@@ -13,6 +13,9 @@ namespace ATM
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new ATM());
-        }
+
+            private Account[] ac = new Account[3];
+            private ATM atm;
+    }
     }
 }
