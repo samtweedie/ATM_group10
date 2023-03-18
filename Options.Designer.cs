@@ -36,7 +36,7 @@
             // 
             // WithdrawCash
             // 
-            WithdrawCash.Location = new Point(187, 214);
+            WithdrawCash.Location = new Point(129, 214);
             WithdrawCash.Name = "WithdrawCash";
             WithdrawCash.Size = new Size(121, 41);
             WithdrawCash.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // CheckBalance
             // 
-            CheckBalance.Location = new Point(480, 214);
+            CheckBalance.Location = new Point(453, 211);
             CheckBalance.Name = "CheckBalance";
             CheckBalance.Size = new Size(117, 44);
             CheckBalance.TabIndex = 1;
