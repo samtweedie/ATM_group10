@@ -17,8 +17,12 @@ namespace ATM
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void WithdrawCash_Click(object sender, EventArgs e)
         {
+            WithdrawCash.Name = "Ten";
+            WithdrawCash.Text = "10";
+            CheckBalance.Name = "Fifty";
+            CheckBalance.Text = "50";
 
         }
 

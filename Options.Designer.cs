@@ -30,8 +30,8 @@
         {
             WithdrawCash = new Button();
             CheckBalance = new Button();
-            button3 = new Button();
-            label1 = new Label();
+            ExitButton = new Button();
+            Prompt = new Label();
             SuspendLayout();
             // 
             // WithdrawCash
@@ -42,7 +42,7 @@
             WithdrawCash.TabIndex = 0;
             WithdrawCash.Text = "Withdraw Cash";
             WithdrawCash.UseVisualStyleBackColor = true;
-            WithdrawCash.Click += button1_Click;
+            WithdrawCash.Click += WithdrawCash_Click;
             // 
             // CheckBalance
             // 
@@ -54,31 +54,31 @@
             CheckBalance.UseVisualStyleBackColor = true;
             CheckBalance.Click += CheckBalance_Click;
             // 
-            // button3
+            // ExitButton
             // 
-            button3.Location = new Point(769, 211);
-            button3.Name = "button3";
-            button3.Size = new Size(102, 44);
-            button3.TabIndex = 2;
-            button3.Text = "Exit";
-            button3.UseVisualStyleBackColor = true;
+            ExitButton.Location = new Point(769, 211);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(102, 44);
+            ExitButton.TabIndex = 2;
+            ExitButton.Text = "Exit";
+            ExitButton.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // Prompt
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(375, 96);
-            label1.Name = "label1";
-            label1.Size = new Size(289, 20);
-            label1.TabIndex = 3;
-            label1.Text = "Please select one of the following options.";
+            Prompt.AutoSize = true;
+            Prompt.Location = new Point(375, 96);
+            Prompt.Name = "Prompt";
+            Prompt.Size = new Size(289, 20);
+            Prompt.TabIndex = 3;
+            Prompt.Text = "Please select one of the following options.";
             // 
             // Options
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1009, 450);
-            Controls.Add(label1);
-            Controls.Add(button3);
+            Controls.Add(Prompt);
+            Controls.Add(ExitButton);
             Controls.Add(CheckBalance);
             Controls.Add(WithdrawCash);
             Name = "Options";
@@ -91,7 +91,7 @@
 
         private Button WithdrawCash;
         private Button CheckBalance;
-        private Button button3;
-        private Label label1;
+        private Button ExitButton;
+        private Label Prompt;
     }
 }
