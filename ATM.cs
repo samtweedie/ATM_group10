@@ -20,30 +20,34 @@ namespace ATM
             this.ac = ac;
             //Console.WriteLine("hello from ATM");
 
-            // an infanite loop to keep the flow of controll going on and on
-            while (true)
-            {
 
-                //ask for account number and store result in acctiveAccount (null if no match found)
-                //activeAccount = this.findAccount();
+            //this next section is the same as what we have in the form
 
-                if (activeAccount != null)
-                {
-                    //if the account is found check the pin 
-                    if (activeAccount.checkPin(this.promptForPin()))
-                    {
-                        //if the pin is a match give the options to do stuff to the account (take money out, view balance, exit)
-                        dispOptions();
-                    }
-                }
-                else
-                {   //if the account number entered is not found let the user know!
-                    Console.WriteLine("no matching account found.");
-                }
 
-                //wipes all text from the console
-                Console.Clear();
-            }
+            //// an infanite loop to keep the flow of controll going on and on
+            //while (true)
+            //{
+
+            //    //ask for account number and store result in acctiveAccount (null if no match found)
+            //    //activeAccount = this.findAccount();
+
+            //    if (activeAccount != null)
+            //    {
+            //        //if the account is found check the pin 
+            //        if (activeAccount.checkPin(this.promptForPin()))
+            //        {
+            //            //if the pin is a match give the options to do stuff to the account (take money out, view balance, exit)
+            //            dispOptions();
+            //        }
+            //    }
+            //    else
+            //    {   //if the account number entered is not found let the user know!
+            //        Console.WriteLine("no matching account found.");
+            //    }
+
+            //    //wipes all text from the console
+            //    Console.Clear();
+            //}
 
 
         }
