@@ -57,11 +57,11 @@ namespace ATM
          *    if the for loop completest with no match we return null
          * 
          */
-        private Account findAccount()
+        private Account findAccount(int input)
         {
             //Console.WriteLine("enter your account number..");
 
-            int input = Convert.ToInt32(Console.ReadLine());
+            //int input = Convert.ToInt32(Console.ReadLine());
 
             for (int i = 0; i < this.ac.Length; i++)
             {
