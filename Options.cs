@@ -23,10 +23,18 @@ namespace ATM
             WithdrawCash.Text = "10";
             CheckBalance.Name = "Fifty";
             CheckBalance.Text = "50";
+            ExitButton.Name = "FiveHundred";
+            ExitButton.Text = "500";
+            Prompt.Text = "Please pick the amount that you wish to withdraw";
 
         }
 
         private void CheckBalance_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Options_Load(object sender, EventArgs e)
         {
 
         }

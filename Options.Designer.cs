@@ -83,6 +83,7 @@
             Controls.Add(WithdrawCash);
             Name = "Options";
             Text = "Options";
+            Load += Options_Load;
             ResumeLayout(false);
             PerformLayout();
         }

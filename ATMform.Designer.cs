@@ -1,6 +1,6 @@
 ﻿namespace ATM
 {
-    partial class Form1
+    partial class ATMForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -43,7 +43,6 @@
             label1.Size = new Size(359, 37);
             label1.TabIndex = 0;
             label1.Text = "Please enter account number";
-            label1.Click += label1_Click;
             // 
             // InputDetails
             // 
@@ -54,7 +53,6 @@
             InputDetails.Name = "InputDetails";
             InputDetails.Size = new Size(125, 43);
             InputDetails.TabIndex = 1;
-            InputDetails.TextChanged += InputDetails_TextChanged;
             // 
             // Continue
             // 
@@ -67,7 +65,7 @@
             Continue.UseVisualStyleBackColor = true;
             Continue.Click += Continue_Click;
             // 
-            // Form1
+            // ATMForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -76,8 +74,8 @@
             Controls.Add(InputDetails);
             Controls.Add(label1);
             Margin = new Padding(2);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "ATMForm";
+            Text = "ATM Form";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
