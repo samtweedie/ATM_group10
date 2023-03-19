@@ -3,9 +3,9 @@ namespace ATM
     public partial class ATMForm : Form
     {
         private Account[] ac = new Account[3];
-        private ATM atm;
+        public ATM atm;
+        public Account activeAccount = null;
         private bool accountCorrect = false;
-        private Account activeAccount = null;
         private int next = 0;
         public ATMForm()
         {
@@ -30,7 +30,7 @@ namespace ATM
             if (next == 1)
             {
                 this.Visible = false;
-                Options options = new Options();  
+                Options options = new Options(activeAccount, atm);  
                 options.Show();
             }
             if (!accountCorrect) //account screen
@@ -41,6 +41,7 @@ namespace ATM
                 }
                 else
                 {
+                   
                     activeAccount = atm.findAccount(Convert.ToInt32(InputDetails.Text));
                     if (activeAccount == null)
                     {

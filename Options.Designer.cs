@@ -62,6 +62,7 @@
             ExitButton.TabIndex = 2;
             ExitButton.Text = "Exit";
             ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButton_Click;
             // 
             // Prompt
             // 
