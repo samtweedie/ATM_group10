@@ -108,7 +108,7 @@ namespace ATM
             else
             {
                 this.Visible = false;
-                ATMForm form = new ATMForm();
+                ATMForm form = new ATMForm(atm);
                 form.Show();
                 InitializeComponent();
             }

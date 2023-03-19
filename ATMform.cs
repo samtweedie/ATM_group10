@@ -2,20 +2,13 @@ namespace ATM
 {
     public partial class ATMForm : Form
     {
-        private Account[] ac = new Account[3];
         public ATM atm;
         public Account activeAccount = null;
         private bool accountCorrect = false;
         private int next = 0;
-        public ATMForm()
+        public ATMForm(ATM atm)
         {
-
-
-            ac[0] = new Account(300, 1111, 111111);
-            ac[1] = new Account(750, 2222, 222222);
-            ac[2] = new Account(3000, 3333, 333333);
-
-            atm = new ATM(ac);
+            this.atm = atm;
             InitializeComponent();
         }
 
