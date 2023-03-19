@@ -26,19 +26,19 @@ namespace ATM
         {
             if (next == 1)
             {
+                next = 2;
+                CheckBalance.Hide();
+                WithdrawCash.Hide();
+                ExitButton.Text = "Exit";
                 if (activeAccount.decrementBalance(10))
                 {
                     //if this is possible display new balance and await key press
-                    Prompt.Text = "new balance " + activeAccount.getBalance();
-                    //Console.WriteLine(" (prese enter to continue)");
-                    //Console.ReadLine();
+                    Prompt.Text = "New balance: £" + activeAccount.getBalance() + ". Please press exit to start again";
                 }
                 else
                 {
                     //if this is not possible inform user and await key press
-                    Prompt.Text = "insufficent funds";
-                    //Console.WriteLine(" (prese enter to continue)");
-                    //Console.ReadLine();
+                    Prompt.Text = "Insufficent funds. Please press exit to start again";
                 }
             }
             else
@@ -57,36 +57,28 @@ namespace ATM
 
         private void CheckBalance_Click(object sender, EventArgs e)
             {
+                CheckBalance.Visible = false;
+                WithdrawCash.Visible = false;
                 if (next == 1)
                 {
+                    next = 2;
+                    ExitButton.Text = "Exit";
                     if (activeAccount.decrementBalance(50))
                     {
-                        //if this is possible display new balance and await key press
-                        Prompt.Text = "new balance " + activeAccount.getBalance();
-                        //Console.WriteLine(" (prese enter to continue)");
-                        //Console.ReadLine();
+                    //if this is possible display new balance and await key press
+                    Prompt.Text = "New balance: £" + activeAccount.getBalance() + ". Please press exit to start again";
                     }
                     else
                     {
                         //if this is not possible inform user and await key press
-                        Prompt.Text = "insufficent funds";
-                        //Console.WriteLine(" (prese enter to continue)");
-                        //Console.ReadLine();
+                        Prompt.Text = "Insufficent funds. Please press exit to start again";
                     }
                 }
                 else
                 {
                     //if (thisAccountActive != null)
-                    WithdrawCash.Visible = false;
-                    CheckBalance.Visible = false;
-                    ExitButton.Visible = false;
-                    Prompt.Text = "Your current balance is: " + activeAccount.getBalance();
-                    /*Console.WriteLine("Press enter to go back to previous menu");
-                    e.KeyChar = Console.ReadLine();
-
-                    this.textBox1.KeyPress += new
-                    System.Windows.Forms.KeyPressEventHandler(CheckEnter);*/
-                }
+                    Prompt.Text = "Your current balance is: £" + activeAccount.getBalance() + ". Please press exit to start again";
+            }
         }
 
         private void Options_Load(object sender, EventArgs e)
@@ -98,25 +90,27 @@ namespace ATM
         {
             if (next == 1)
             {
+                next = 2;
+                CheckBalance.Hide();
+                WithdrawCash.Hide();
+                ExitButton.Text = "Exit";
                 if (activeAccount.decrementBalance(500))
                 {
                     //if this is possible display new balance and await key press
-                    Prompt.Text = "new balance " + activeAccount.getBalance();
-                    //Console.WriteLine(" (prese enter to continue)");
-                    //Console.ReadLine();
+                    Prompt.Text = "New balance: £" + activeAccount.getBalance() + ". Please press exit to start again";
                 }
                 else
                 {
                     //if this is not possible inform user and await key press
-                    Prompt.Text = "insufficent funds";
-                    //Console.WriteLine(" (prese enter to continue)");
-                    //Console.ReadLine();
+                    Prompt.Text = "Insufficent funds. Please press exit to start again";
                 }
             }
             else
             {
-                Prompt.Text = "Thank you for using this ATM , Bye";
-                this.Close();
+                this.Visible = false;
+                ATMForm form = new ATMForm();
+                form.Show();
+                InitializeComponent();
             }
         }
     }
