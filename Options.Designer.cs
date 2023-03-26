@@ -32,6 +32,8 @@
             CheckBalance = new Button();
             ExitButton = new Button();
             Prompt = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
             SuspendLayout();
             // 
             // WithdrawCash
@@ -67,17 +69,43 @@
             // Prompt
             // 
             Prompt.AutoSize = true;
-            Prompt.Location = new Point(375, 96);
+            Prompt.Location = new Point(375, 138);
             Prompt.Name = "Prompt";
             Prompt.Size = new Size(289, 20);
             Prompt.TabIndex = 3;
             Prompt.Text = "Please select one of the following options.";
             // 
+            // textBox1
+            // 
+            textBox1.BackColor = SystemColors.ActiveBorder;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Elephant", 22.1999989F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.Location = new Point(-1, 1);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 48);
+            textBox1.TabIndex = 10;
+            textBox1.Text = "ATM";
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = SystemColors.ActiveBorder;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Elephant", 28.1999989F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox2.ForeColor = SystemColors.InfoText;
+            textBox2.Location = new Point(300, 42);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(425, 61);
+            textBox2.TabIndex = 11;
+            textBox2.Text = "Bank Of Dundee";
+            // 
             // Options
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(1009, 450);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
             Controls.Add(Prompt);
             Controls.Add(ExitButton);
             Controls.Add(CheckBalance);
@@ -95,5 +123,7 @@
         private Button CheckBalance;
         private Button ExitButton;
         private Label Prompt;
+        private TextBox textBox1;
+        private TextBox textBox2;
     }
 }
