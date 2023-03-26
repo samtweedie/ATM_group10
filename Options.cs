@@ -22,7 +22,7 @@ namespace ATM
             this.atm = atm;
         }
 
-        private void WithdrawCash_Click(object sender, EventArgs e)
+        public void WithdrawCash_Click(object sender, EventArgs e)
         {
             if (next == 1)
             {
