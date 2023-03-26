@@ -15,6 +15,8 @@ namespace ATM
         Account activeAccount;
         ATM atm;
         int next = 0;
+        int prob = 0;
+        int soln = 0;
         public Options(Account activeAccount, ATM atm)
         {
             InitializeComponent();
@@ -30,6 +32,10 @@ namespace ATM
                 CheckBalance.Hide();
                 WithdrawCash.Hide();
                 ExitButton.Text = "Exit";
+                if (prob == 1)
+                {
+
+                }
                 if (activeAccount.decrementBalance(10))
                 {
                     //if this is possible display new balance and await key press
@@ -56,28 +62,28 @@ namespace ATM
         }
 
         private void CheckBalance_Click(object sender, EventArgs e)
+        {
+            CheckBalance.Visible = false;
+            WithdrawCash.Visible = false;
+            if (next == 1)
             {
-                CheckBalance.Visible = false;
-                WithdrawCash.Visible = false;
-                if (next == 1)
+                next = 2;
+                ExitButton.Text = "Exit";
+                if (activeAccount.decrementBalance(50))
                 {
-                    next = 2;
-                    ExitButton.Text = "Exit";
-                    if (activeAccount.decrementBalance(50))
-                    {
                     //if this is possible display new balance and await key press
                     Prompt.Text = "New balance: £" + activeAccount.getBalance() + ". Please press exit to start again";
-                    }
-                    else
-                    {
-                        //if this is not possible inform user and await key press
-                        Prompt.Text = "Insufficent funds. Please press exit to start again";
-                    }
                 }
                 else
                 {
-                    //if (thisAccountActive != null)
-                    Prompt.Text = "Your current balance is: £" + activeAccount.getBalance() + ". Please press exit to start again";
+                    //if this is not possible inform user and await key press
+                    Prompt.Text = "Insufficent funds. Please press exit to start again";
+                }
+            }
+            else
+            {
+                //if (thisAccountActive != null)
+                Prompt.Text = "Your current balance is: £" + activeAccount.getBalance() + ". Please press exit to start again";
             }
         }
 
@@ -112,6 +118,19 @@ namespace ATM
                 form.Show();
                 InitializeComponent();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataRaceSoln_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void DataRaceProb_Click(object sender, EventArgs e)
+        {
         }
     }
 }

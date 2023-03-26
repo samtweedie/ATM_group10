@@ -6,6 +6,7 @@ namespace ATM
         public Account activeAccount = null;
         private bool accountCorrect = false;
         private int next = 0;
+        Program program = new Program();
         public ATMForm(ATM atm)
         {
             this.atm = atm;
@@ -66,6 +67,19 @@ namespace ATM
                     }
                 }
             }
+        }
+
+        private void DataRaceProb_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            activeAccount = atm.findAccount(111111);
+            Options options1 = new Options(activeAccount, atm);
+            options1.Show();
+        }
+
+        private void DataRaceSoln_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

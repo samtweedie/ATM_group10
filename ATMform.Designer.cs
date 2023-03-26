@@ -31,6 +31,8 @@
             label1 = new Label();
             InputDetails = new TextBox();
             Continue = new Button();
+            DataRaceProb = new Button();
+            DataRaceSoln = new Button();
             SuspendLayout();
             // 
             // label1
@@ -65,11 +67,33 @@
             Continue.UseVisualStyleBackColor = true;
             Continue.Click += Continue_Click;
             // 
+            // DataRaceProb
+            // 
+            DataRaceProb.Location = new Point(22, 218);
+            DataRaceProb.Name = "DataRaceProb";
+            DataRaceProb.Size = new Size(152, 56);
+            DataRaceProb.TabIndex = 8;
+            DataRaceProb.Text = "Implement Data-Race Problem";
+            DataRaceProb.UseVisualStyleBackColor = true;
+            DataRaceProb.Click += DataRaceProb_Click;
+            // 
+            // DataRaceSoln
+            // 
+            DataRaceSoln.Location = new Point(208, 218);
+            DataRaceSoln.Name = "DataRaceSoln";
+            DataRaceSoln.Size = new Size(152, 56);
+            DataRaceSoln.TabIndex = 7;
+            DataRaceSoln.Text = "Implement Data-Race Solution";
+            DataRaceSoln.UseVisualStyleBackColor = true;
+            DataRaceSoln.Click += DataRaceSoln_Click;
+            // 
             // ATMForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(492, 281);
+            Controls.Add(DataRaceProb);
+            Controls.Add(DataRaceSoln);
             Controls.Add(Continue);
             Controls.Add(InputDetails);
             Controls.Add(label1);
@@ -86,5 +110,7 @@
         private Label label1;
         private TextBox InputDetails;
         private Button Continue;
+        private Button DataRaceProb;
+        private Button DataRaceSoln;
     }
 }
