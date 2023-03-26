@@ -16,7 +16,6 @@ namespace ATM
         ATM atm;
         int next = 0;
         int prob = 0;
-        int soln = 0;
         public Options(Account activeAccount, ATM atm)
         {
             InitializeComponent();

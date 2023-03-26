@@ -3,10 +3,10 @@ namespace ATM
     public partial class ATMForm : Form
     {
         public ATM atm;
-        public Account activeAccount = null;
+        public Account activeAccount;
         private bool accountCorrect = false;
-        private int next = 0;
         Program program = new Program();
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public ATMForm(ATM atm)
         {
             this.atm = atm;

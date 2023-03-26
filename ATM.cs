@@ -12,7 +12,7 @@ namespace ATM
         private Account[] ac;
 
         //this is a referance to the account that is being used
-        private Account activeAccount = null;
+        private Account? activeAccount = null;
 
         // the atm constructor takes an array of account objects as a referance
         public ATM(Account[] ac)
@@ -72,6 +72,7 @@ namespace ATM
                 }
             }
 
+#pragma warning disable CS8603 // Possible null reference return.
             return null;
         }
         /*
@@ -81,120 +82,7 @@ namespace ATM
          * returns the string entered converted to an int
          * 
          */
-        private int promptForPin()
-        {
-            //Console.WriteLine("enter pin:");
-            String str = Console.ReadLine();
-            int pinNumEntered = Convert.ToInt32(str);
-            return pinNumEntered;
-        }
-
-        /*
-         * 
-         *  give the use the options to do with the accoutn
-         *  
-         *  promt for input
-         *  and defer to appropriate method based on input
-         *  
-         */
-        private void dispOptions()
-        {
-            Console.WriteLine("1> take out cash");
-            Console.WriteLine("2> balance");
-            Console.WriteLine("3> exit");
-
-            int input = Convert.ToInt32(Console.ReadLine());
-
-            if (input == 1)
-            {
-                dispWithdraw();
-            }
-            else if (input == 2)
-            {
-                dispBalance();
-            }
-            else if (input == 3)
-            {
-
-
-            }
-            else
-            {
-
-            }
-
-        }
-
-        /*
-         * 
-         * offer withdrawable amounts
-         * 
-         * based on input attempt to withraw the corosponding amount of money
-         * 
-         */
-        private void dispWithdraw()
-        {
-            Console.WriteLine("1> 10");
-            Console.WriteLine("2> 50");
-            Console.WriteLine("3> 500");
-
-            int input = Convert.ToInt32(Console.ReadLine());
-
-            if (input > 0 && input < 4)
-            {
-
-                //opiton one is entered by the user
-                if (input == 1)
-                {
-
-                    //attempt to decrement account by 10 punds
-                    if (activeAccount.decrementBalance(10))
-                    {
-                        //if this is possible display new balance and await key press
-                        Console.WriteLine("new balance " + activeAccount.getBalance());
-                        Console.WriteLine(" (prese enter to continue)");
-                        Console.ReadLine();
-                    }
-                    else
-                    {
-                        //if this is not possible inform user and await key press
-                        Console.WriteLine("insufficent funds");
-                        Console.WriteLine(" (prese enter to continue)");
-                        Console.ReadLine();
-                    }
-                }
-                else if (input == 2)
-                {
-                    if (activeAccount.decrementBalance(50))
-                    {
-                        Console.WriteLine("new balance " + activeAccount.getBalance());
-                        Console.WriteLine(" (prese enter to continue)");
-                        Console.ReadLine();
-                    }
-                    else
-                    {
-                        Console.WriteLine("insufficent funds");
-                        Console.WriteLine(" (prese enter to continue)");
-                        Console.ReadLine();
-                    }
-                }
-                else if (input == 3)
-                {
-                    if (activeAccount.decrementBalance(500))
-                    {
-                        Console.WriteLine("new balance " + activeAccount.getBalance());
-                        Console.WriteLine(" (prese enter to continue)");
-                        Console.ReadLine();
-                    }
-                    else
-                    {
-                        Console.WriteLine("insufficent funds");
-                        Console.WriteLine(" (prese enter to continue)");
-                        Console.ReadLine();
-                    }
-                }
-            }
-        }
+        
         /*
          *  display balance of activeAccount and await keypress
          *  
