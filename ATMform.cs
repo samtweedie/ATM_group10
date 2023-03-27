@@ -5,7 +5,8 @@ namespace ATM
         public ATM atm;
         public Account activeAccount;
         private bool accountCorrect = false;
-        #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        private int wrongPinCount = 0;
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public ATMForm(ATM atm)
         {
             this.atm = atm;
@@ -20,7 +21,6 @@ namespace ATM
 
         private void Continue_Click(object sender, EventArgs e)
         {
-            int wrongPinCount = 0;
             if (!accountCorrect) //account screen
             {
                 if (InputDetails.Text.Length < 6)
@@ -52,7 +52,8 @@ namespace ATM
                     if (InputDetails.Text.Length < 4)
                     {
                         InputDetails.Clear();
-                        MessageBox.Show("You have entered less than 4 digits. Your pin must be 4 digits. Please try again", "Error", MessageBoxButtons.OK);
+                        wrongPinCount++;
+                        MessageBox.Show("You have entered less than 4 digits. Your pin must be 4 digits. You have "+(4-wrongPinCount)+" attempts remaining", "Error", MessageBoxButtons.OK);
                     }
                     else
                     {
