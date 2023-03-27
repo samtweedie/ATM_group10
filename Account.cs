@@ -12,6 +12,7 @@ namespace ATM
         private int balance;
         private int pin;
         private int accountNum;
+        private bool locked;
 
         // a constructor that takes initial values for each of the attributes (balance, pin, accountNumber)
         public Account(int balance, int pin, int accountNum)
@@ -19,6 +20,7 @@ namespace ATM
             this.balance = balance;
             this.pin = pin;
             this.accountNum = accountNum;
+            this.locked = false;
         }
 
         //getter and setter functions for balance
@@ -75,6 +77,13 @@ namespace ATM
         {
             return accountNum;
         }
-
+        public bool isLocked()
+        {
+            return locked;
+        }
+        public void lockCard()
+        {
+            locked = true;
+        }
     }
 }
