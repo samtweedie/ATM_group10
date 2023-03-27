@@ -85,5 +85,23 @@ namespace ATM
         {
 
         }
+
+        private void InputDetails_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataRaceProb_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            activeAccount = atm.findAccount(111111);
+            Options options1 = new Options(activeAccount, atm);
+            options1.Show();
+        }
+
+        private void DataRaceSoln_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
