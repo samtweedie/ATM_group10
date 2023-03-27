@@ -11,6 +11,8 @@ namespace ATM
 
         private Account[] ac = new Account[3];
         private ATM atm;
+        private static bool dataRace = false;
+        private static bool syncronise = false;
 
         public Program()
         {
@@ -28,7 +30,25 @@ namespace ATM
             t3.Start();
 
         }
+        public static bool getDataRace()
+        {
+            return dataRace;
+        }
 
+        public static void setDataRace(bool dr)
+        {
+            dataRace = dr;
+        }
+
+        public static bool getSyncronise()
+        {
+            return syncronise;
+        }
+
+        public static void setSyncronise(bool syn)
+        {
+            syncronise = syn;
+        }
         private static void RunForm(ATM atm)
         {
             Application.Run(new ATMForm(atm));
