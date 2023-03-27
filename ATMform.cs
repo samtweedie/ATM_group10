@@ -5,7 +5,6 @@ namespace ATM
         public ATM atm;
         public Account activeAccount;
         private bool accountCorrect = false;
-        Program program = new Program();
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public ATMForm(ATM atm)
         {
@@ -69,7 +68,7 @@ namespace ATM
             }
         }
 
-        private void DataRaceProb_Click(object sender, EventArgs e)
+        /*private void DataRaceProb_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             activeAccount = atm.findAccount(111111);
@@ -80,7 +79,7 @@ namespace ATM
         private void DataRaceSoln_Click(object sender, EventArgs e)
         {
 
-        }
+        }*/
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

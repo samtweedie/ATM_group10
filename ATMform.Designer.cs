@@ -31,8 +31,6 @@
             label1 = new Label();
             InputDetails = new TextBox();
             Continue = new Button();
-            DataRaceProb = new Button();
-            DataRaceSoln = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             SuspendLayout();
@@ -69,26 +67,6 @@
             Continue.UseVisualStyleBackColor = true;
             Continue.Click += Continue_Click;
             // 
-            // DataRaceProb
-            // 
-            DataRaceProb.Location = new Point(208, 374);
-            DataRaceProb.Name = "DataRaceProb";
-            DataRaceProb.Size = new Size(152, 56);
-            DataRaceProb.TabIndex = 8;
-            DataRaceProb.Text = "Implement Data-Race Problem";
-            DataRaceProb.UseVisualStyleBackColor = true;
-            DataRaceProb.Click += DataRaceProb_Click;
-            // 
-            // DataRaceSoln
-            // 
-            DataRaceSoln.Location = new Point(394, 374);
-            DataRaceSoln.Name = "DataRaceSoln";
-            DataRaceSoln.Size = new Size(152, 56);
-            DataRaceSoln.TabIndex = 7;
-            DataRaceSoln.Text = "Implement Data-Race Solution";
-            DataRaceSoln.UseVisualStyleBackColor = true;
-            DataRaceSoln.Click += DataRaceSoln_Click;
-            // 
             // textBox1
             // 
             textBox1.BackColor = SystemColors.ActiveBorder;
@@ -121,8 +99,6 @@
             ClientSize = new Size(782, 443);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Controls.Add(DataRaceProb);
-            Controls.Add(DataRaceSoln);
             Controls.Add(Continue);
             Controls.Add(InputDetails);
             Controls.Add(label1);
@@ -139,8 +115,6 @@
         private Label label1;
         private TextBox InputDetails;
         private Button Continue;
-        private Button DataRaceProb;
-        private Button DataRaceSoln;
         private TextBox textBox1;
         private TextBox textBox2;
     }
