@@ -2,6 +2,7 @@ namespace ATM
 {
     public partial class ATMForm : Form
     {
+        WindowsMediaPlayer sfx = new WindowsMediaPlayer();
         public ATM atm;
         public Account activeAccount;
         private bool accountCorrect = false;
@@ -11,6 +12,7 @@ namespace ATM
         {
             this.atm = atm;
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -111,6 +113,16 @@ namespace ATM
         }
 
         private void DataRaceSoln_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
