@@ -39,7 +39,7 @@
             // WithdrawCash
             // 
             WithdrawCash.BackColor = SystemColors.GrayText;
-            WithdrawCash.Font = new Font("Arial Narrow", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            WithdrawCash.Font = new Font("Arial Narrow", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             WithdrawCash.Location = new Point(184, 269);
             WithdrawCash.Name = "WithdrawCash";
             WithdrawCash.Size = new Size(147, 41);
@@ -51,7 +51,7 @@
             // CheckBalance
             // 
             CheckBalance.BackColor = SystemColors.GrayText;
-            CheckBalance.Font = new Font("Arial Narrow", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            CheckBalance.Font = new Font("Arial Narrow", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             CheckBalance.ForeColor = SystemColors.ActiveCaptionText;
             CheckBalance.Location = new Point(404, 266);
             CheckBalance.Name = "CheckBalance";
@@ -64,7 +64,7 @@
             // ExitButton
             // 
             ExitButton.BackColor = SystemColors.GrayText;
-            ExitButton.Font = new Font("Arial Narrow", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            ExitButton.Font = new Font("Arial Narrow", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             ExitButton.Location = new Point(678, 269);
             ExitButton.Name = "ExitButton";
             ExitButton.Size = new Size(102, 44);
@@ -76,10 +76,10 @@
             // Prompt
             // 
             Prompt.AutoSize = true;
-            Prompt.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Prompt.Font = new Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Prompt.Location = new Point(330, 165);
             Prompt.Name = "Prompt";
-            Prompt.Size = new Size(315, 24);
+            Prompt.Size = new Size(337, 24);
             Prompt.TabIndex = 3;
             Prompt.Text = "Please select one of the following options.";
             // 
@@ -87,7 +87,7 @@
             // 
             textBox1.BackColor = SystemColors.GradientActiveCaption;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Arial Narrow", 22.2F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Font = new Font("Arial Narrow", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
             textBox1.Location = new Point(-1, 1);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 43);
@@ -98,7 +98,7 @@
             // 
             textBox2.BackColor = SystemColors.GradientActiveCaption;
             textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Arial Narrow", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Font = new Font("Arial Narrow", 36F, FontStyle.Bold, GraphicsUnit.Point);
             textBox2.ForeColor = SystemColors.InfoText;
             textBox2.Location = new Point(300, 42);
             textBox2.Name = "textBox2";

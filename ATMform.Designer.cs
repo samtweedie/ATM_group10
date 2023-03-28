@@ -41,7 +41,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(188, 156);
+            label1.Location = new Point(182, 158);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(445, 43);
@@ -52,7 +52,7 @@
             // InputDetails
             // 
             InputDetails.Font = new Font("Segoe UI", 16.125F, FontStyle.Regular, GraphicsUnit.Point);
-            InputDetails.Location = new Point(304, 235);
+            InputDetails.Location = new Point(304, 232);
             InputDetails.Margin = new Padding(2);
             InputDetails.MaxLength = 6;
             InputDetails.Name = "InputDetails";
@@ -62,40 +62,21 @@
             // 
             // Continue
             // 
-            Continue.Location = new Point(337, 320);
+            Continue.Font = new Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Continue.Location = new Point(317, 307);
             Continue.Margin = new Padding(2);
             Continue.Name = "Continue";
-            Continue.Size = new Size(92, 29);
+            Continue.Size = new Size(97, 37);
             Continue.TabIndex = 2;
             Continue.Text = "Continue";
             Continue.UseVisualStyleBackColor = false;
             Continue.Click += Continue_Click;
             // 
-            // DataRaceProb
-            // 
-            DataRaceProb.Location = new Point(208, 374);
-            DataRaceProb.Name = "DataRaceProb";
-            DataRaceProb.Size = new Size(152, 56);
-            DataRaceProb.TabIndex = 8;
-            DataRaceProb.Text = "Implement Data-Race Problem";
-            DataRaceProb.UseVisualStyleBackColor = true;
-            DataRaceProb.Click += DataRaceProb_Click;
-            // 
-            // DataRaceSoln
-            // 
-            DataRaceSoln.Location = new Point(394, 374);
-            DataRaceSoln.Name = "DataRaceSoln";
-            DataRaceSoln.Size = new Size(152, 56);
-            DataRaceSoln.TabIndex = 7;
-            DataRaceSoln.Text = "Implement Data-Race Solution";
-            DataRaceSoln.UseVisualStyleBackColor = true;
-            DataRaceSoln.Click += DataRaceSoln_Click;
-            // 
             // textBox1
             // 
             textBox1.BackColor = SystemColors.GradientActiveCaption;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Arial Narrow", 22.2F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Font = new Font("Arial Narrow", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
             textBox1.Location = new Point(0, 0);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 43);
@@ -115,8 +96,6 @@
             textBox2.TabIndex = 10;
             textBox2.Text = "Bank Of Dundee";
             textBox2.TextChanged += textBox2_TextChanged;
-            // 
-            // 
             // 
             // DataRaceProb
             // 
@@ -166,6 +145,6 @@
         private TextBox textBox2;
         private Button DataRaceProb;
         private Button DataRaceSoln;
-     
+
     }
 }

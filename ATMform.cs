@@ -49,13 +49,13 @@ namespace ATM
             }
             else //pin screen
             {
-                if(wrongPinCount < 4 && (!activeAccount.isLocked())) //number of wrong pin entries allowed
+                if (wrongPinCount < 4 && (!activeAccount.isLocked())) //number of wrong pin entries allowed
                 {
                     if (InputDetails.Text.Length < 4)
                     {
                         InputDetails.Clear();
                         wrongPinCount++;
-                        MessageBox.Show("You have entered less than 4 digits. Your pin must be 4 digits. You have "+(4-wrongPinCount)+" attempts remaining", "Error", MessageBoxButtons.OK);
+                        MessageBox.Show("You have entered less than 4 digits. Your pin must be 4 digits. You have " + (4 - wrongPinCount) + " attempts remaining", "Error", MessageBoxButtons.OK);
                     }
                     else
                     {
@@ -69,7 +69,7 @@ namespace ATM
                         {
                             InputDetails.Clear();
                             wrongPinCount++;
-                            MessageBox.Show("Incorrect pin. You have "+(4-wrongPinCount)+" attempts remaining", "Error", MessageBoxButtons.OK);
+                            MessageBox.Show("Incorrect pin. You have " + (4 - wrongPinCount) + " attempts remaining", "Error", MessageBoxButtons.OK);
                         }
                     }
                 }
