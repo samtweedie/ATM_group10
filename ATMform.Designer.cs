@@ -166,7 +166,6 @@
         private TextBox textBox2;
         private Button DataRaceProb;
         private Button DataRaceSoln;
-        private TextBox textBox1;
-        private TextBox textBox2;
+     
     }
 }
